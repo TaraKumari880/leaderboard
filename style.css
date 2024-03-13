@@ -1,0 +1,123 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: rgb(234, 214, 214);
+    background-color: hwb(0 2% 98%); 
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+main{
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    gap:2em;
+}
+.main-title{
+    font-size: 1.5em;
+    width: 80%;
+}
+.main-form{
+    display: grid;
+    gap:.5em;
+    justify-content: center;
+    display: flex;
+}
+input{
+    all:unset;
+    padding: .5em .8em;
+    width:80%;
+    border: 1px solid aqua;
+    background-color:white;
+    color: black;
+    
+}
+input:focus{
+    border:3px solid aqua;
+}
+.main-error{
+    color: red;
+    font-weight: 700;
+    font-size: 1em;
+    display: none;
+}
+#Country{
+    width:220px;
+    height:40px;
+}
+button:not(.main-btn){
+    all:unset;
+    border-radius: 50%;
+
+    background-color:aquamarine;
+    width:60px;
+    height: 60px;
+    transition: all .5s ease;
+    color: black;
+}
+.main-btn{
+    all:unset;
+    width: 10em;
+    background-color: aquamarine;
+    padding: .7em 0;
+    transition: all .5s ease;
+    color: black;
+}
+button:act{
+    transform: scale(.95) translateY(5px);
+    filter: brightness(.9);
+}
+.main-score{
+    width:100%;
+    display: grid;
+    justify-content: center;
+    gap:1em;
+}
+.main-scoreboard{
+    display: grid;
+    justify-content: center;
+    gap:3em;
+    width:900px;
+    background-color: aqua;
+    text-transform: uppercase;
+    padding: 1em 0;
+    color: black;
+}
+.main-player{
+    font-weight: 400;
+}
+.main-time{
+    color: #686868;
+    font-size: .8em;
+}
+.main-scored-btn{
+    margin: 2em;
+    gap:.5;
+    display: flex;
+}
+@media(min-width:35.25em){
+    .main-title{
+        font-size: 2.5rem;
+        font-weight: 500;
+        font-variant: small-caps;
+
+    }
+    
+    .main-scoreboard{
+        width: 800px;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+    input{
+        width: 10em;
+    }
+}
